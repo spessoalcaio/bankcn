@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Registro | Banco RPG</title><link rel="stylesheet" href="/styles.css" /></head>
+  <body>
+    <div class="page">
+      <div class="topbar"><a class="brand" href="/">🏦 Banco RPG</a><nav class="nav-links"><a class="nav-pill" href="/login">Login</a><a class="nav-pill active" href="/register">Registro</a></nav></div>
+      <section class="card" style="max-width:700px;margin:auto;">
+        <h2>Cadastrar membro</h2>
+        <div id="notice" class="notice hidden"></div>
+        <form id="register-form">
+          <label>Nome completo</label><input name="full_name" required />
+          <label>Usuário</label><input name="username" required />
+          <label>Senha</label><input type="password" name="password" required />
+          <label>Órgão</label><select name="organization_id" id="organization-select" required></select>
+          <label>Cargo</label><select name="role_id" id="role-select" required></select>
+          <label>Salário customizado (opcional)</label><input name="custom_salary" type="number" step="0.01" />
+          <button type="submit">Criar conta</button>
+        </form>
+      </section>
+    </div>
+    <script src="/common.js"></script>
+    <script src="/register.js"></script>
+  </body>
+</html>

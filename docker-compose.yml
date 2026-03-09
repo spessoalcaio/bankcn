@@ -1,0 +1,9 @@
+services:
+  bank-rpg:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ADMIN_TOKEN=admin-rpg-2026
+    volumes:
+      - ./rpg_bank.db:/app/rpg_bank.db
