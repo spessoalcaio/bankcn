@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Painel | Banco RPG</title><link rel="stylesheet" href="/styles.css" /></head>
+  <body>
+    <div class="page">
+      <div class="topbar"><a class="brand" href="/">🏦 Banco RPG</a><nav class="nav-links"><a class="nav-pill active" href="/dashboard">Painel</a><a class="nav-pill" href="/admin">Admin</a><a class="nav-pill" href="#" id="logout-link">Sair</a></nav></div>
+      <div id="notice" class="notice hidden"></div>
+      <section class="kpi">
+        <div class="metric"><small>Cliente</small><strong id="m-name">-</strong></div>
+        <div class="metric"><small>Conta</small><strong id="m-account">-</strong></div>
+        <div class="metric"><small>Saldo atual</small><strong id="m-balance">R$ 0,00</strong></div>
+      </section>
+      <section class="grid" style="margin-top:1rem;">
+        <article class="card">
+          <h3>Transferência interna</h3>
+          <form id="transfer-form">
+            <label>Conta destino</label><input name="target_account_number" placeholder="RPG000001" required />
+            <label>Valor</label><input name="amount" type="number" step="0.01" required />
+            <label>Descrição</label><input name="description" value="Transferência interna" />
+            <button type="submit">Transferir</button>
+          </form>
+        </article>
+        <article class="card">
+          <h3>Nova chave Pix</h3>
+          <form id="pix-form">
+            <label>Tipo</label><select name="key_type"><option>email</option><option>aleatoria</option><option>telefone</option></select>
+            <label>Valor da chave</label><input name="key_value" required />
+            <button type="submit">Cadastrar Pix</button>
+          </form>
+        </article>
+      </section>
+      <section class="grid" style="margin-top:1rem;">
+        <article class="card"><h3>Extrato</h3><table class="table"><thead><tr><th>Data</th><th>Tipo</th><th>Valor</th><th>Detalhes</th></tr></thead><tbody id="statement-body"></tbody></table></article>
+        <article class="card"><h3>Minhas chaves Pix</h3><table class="table"><thead><tr><th>Tipo</th><th>Chave</th></tr></thead><tbody id="pix-body"></tbody></table></article>
+      </section>
+    </div>
+    <script src="/common.js"></script>
+    <script src="/dashboard.js"></script>
+  </body>
+</html>

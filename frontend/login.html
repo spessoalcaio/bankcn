@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Login | Banco RPG</title><link rel="stylesheet" href="/styles.css" /></head>
+  <body>
+    <div class="page">
+      <div class="topbar"><a class="brand" href="/">🏦 Banco RPG</a><nav class="nav-links"><a class="nav-pill active" href="/login">Login</a><a class="nav-pill" href="/register">Registro</a></nav></div>
+      <section class="card" style="max-width:480px;margin:auto;">
+        <h2>Entrar na conta</h2>
+        <div id="notice" class="notice hidden"></div>
+        <form id="login-form">
+          <label>Usuário</label><input name="username" required />
+          <label>Senha</label><input type="password" name="password" required />
+          <button type="submit">Acessar painel</button>
+        </form>
+      </section>
+    </div>
+    <script src="/common.js"></script>
+    <script src="/login.js"></script>
+  </body>
+</html>
